@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/flaticon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="assets/babyLogo.png" alt="logo"></div>            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><img src="assets/bolsa-de-la-compra.png" alt="Compras" class="icono"></a></li>
+            </ul>
+            <div class="icono__menu">
+                <a href="#"><img src="assets/barraMenu.png" alt="menu" class="icono"></a>
+            </div>
+        </nav>
+
+        <div class="menu__lateral">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><img src="assets/bolsa-de-la-compra.png" alt="Compras" class="icono"></a></li>
+            </ul>
+        </div>    
+    </header>
+    <section class="container--center container__banner2">
+        <div class="banner2">
+            <p>Order form</p>
+        </div>
+    </section>
+    <div class="container__wrap">
+        <div class="texto__instrucciones"><p>Please enter the information requested below (*Required information):</p></div>
+        <section class="container--center container--form">
+            <form>
+                <label for="firstName" class="double-width">
+                    <span>*First name</span>
+                    <input id="firstName" type="text" name="firstName" required>
+                </label>
+                <label for="lastName" class="double-width2">
+                    <span>*Last Name</span>
+                    <input id="lastName" type="text" name="lastName" required>
+                </label>
+                <label for="streetAddress" class="double-width">
+                    <span>*Street address</span>
+                    <input id="streetAddress" type="text" name="streetAddress" required>
+                </label>
+                <label for="Zip" class="double-width2">
+                    <span>ZIP or postal code</span>
+                    <input id="ZIP" type="number" name="ZIP" min="100000" max="9999999999">
+                </label>
+                <label for="city" class="double-width">
+                    <span>*City</span>
+                    <input id="city" type="text" name="city" required>
+                </label>
+                <label for="country" class="double-width2">
+                    <span>Country or region</span>
+                    <select id="country" name="country" class="form-select" required>
+                        <option value="CA">Canada</option>
+                        <option value="MX">Mexico</option>
+                        <option value="US">United States</option>
+                    </select>
+                </label>
+                <label for="size" class="area1" required>
+                    <span>Select size</span>
+                    <select id="size" name="size" class="form-select" required>
+                        <option value="NB">0-2 months</option>
+                        <option value="B1">2-6 months</option>
+                        <option value="B2">6-12 months</option>
+                        <option value="B3">1-2 years</option>
+                    </select>
+                </label>
+                <label for="color" class="area2">
+                    <span>Select color</span>
+                    <select name='color' class="select__color" required>
+                        <option value='1' style='background-color:#ffb6c1' id="color1">Pink</option>
+                        <option value='2' style='background-color:#fffacd' id="color2">Yellow</option>
+                        <option value='3' style='background-color:#e6e6fa' id="color3">Purple</option>
+                        <option value='4' style='background-color:#d2fdbb' id="color4">Green</option>
+                        <option value='5' style='background-color:#d3eeff' id="color5">Blue</option>
+                    </select>
+                </label>
+                <label for="qty" class="area3" required>
+                    <span>Quantity</span>
+                    <input id="qty" type="number" name="qty" min="1" max="10">
+                </label>
+                <label for="print" class="full-width print__element" required>
+                    <span>Please choose your favorite design:</span>
+                    <div class="print__element">
+                        <input type=radio name="print" id="print1">
+                        <img src="assets/body1.jpg" class="body__image" alt="body">
+                    </div>
+                    <div class="print__element">
+                        <input type=radio name="print" id="print2">
+                        <img src="assets/body2.jpg" class="body__image" alt="body">    
+                    </div>
+                    <div class="print__element">
+                        <input type=radio name="print" id="print3">
+                        <img src="assets/body3.jpg" class="body__image" alt="body">
+                    </div>
+                    <div class="print__element">
+                        <input type=radio name="print" id="print4">
+                        <img src="assets/body4.jpg" class="body__image" alt="body">
+                    </div>
+                </label>    
+                <div class="full-width">
+                    <p><button type="submit">Submit</button></p>
+                </div> 
+            </form>
+        </section>  
+    </div> 
+    <footer>
+        <div class="container__footer--top">
+            <div class="container__logo">
+                <img src="assets/babyLogo.png" alt="logo">
+            </div>
+            <div class="container__about">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate perspiciatis maiores eos ex quo reprehenderit officiis sint corrupti consequuntur illum ab, vero dignissimos? At sit totam nostrum natus nihil.</p>        
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde id aliquid fuga consequatur architecto, cumque ex ratione, accusantium aspernatur voluptates atque. Natus, quisquam aut rem saepe illo velit quae minus!</p>
+            </div>
+            <div class="container__social">
+                <h2>Follow us</h2>
+                <a href="#" title="facebook" class="boton"><img src="assets/facebook.png" alt="iconoFacebook"/></a>
+                <a href="#" title="instagram" class="boton"><img src="assets/instagram.png" alt="iconoInstagram" /></a>
+                <a href="#" title="twitter" class="boton"><img src="assets/twitter.png" alt="iconoTwitter" /></a>
+                <a href="#" title="youtube" class="boton"><img src="assets/youtube.png" alt="iconoYoutube" /></a>
+            </div>
+        </div>
+        <div class="container__footer--bottom">
+            <p>Coded by <a href="#">Nelly Bautista </a>& <a href="#">Jorge Prado</a></p>
+        </div>
+    </footer>
+    <script>
+        const iconoMenu = document.querySelector('.icono__menu')
+        const iconoMenuB = document.querySelector('.icono__menu i')
+        const menuLateral = document.querySelector('.menu__lateral')
+        
+        iconoMenu.onclick = function () {
+            menuLateral.classList.toggle('abierto')
+            const isOpen = menuLateral.classList.contains('abierto')
+        }
+    </script>
+</body>
+</html>
