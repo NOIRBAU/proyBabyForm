@@ -70,6 +70,10 @@ p {
     scale: 1.1;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* BARRA DE NAVEGACIÓN */
 
 header {
@@ -129,6 +133,7 @@ header {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    list-style: none;
 }
 
 .menu__lateral li {
