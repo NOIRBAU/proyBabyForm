@@ -255,20 +255,28 @@ input {
     padding: 0;
 }
 
+.center {
+    text-align: center;
+}
+
 .area1 {
     grid-column: 1 / 2;
     padding: 0;
 }
 
 .area2 {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     padding: 0;
 }
 
 .area3 {
+    grid-column: 3 / 4;
+    padding: 0;
+}
+
+.area4 {
     grid-column: 4 / 5;
     padding: 0;
-    margin-right: 10px;
 }
 
 button {
@@ -295,14 +303,7 @@ button:hover, button:focus {
   }
 
   .print__element {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-  }
-
-  .print__element img:hover {
-    transform: scale(3);
+    display: grid;
   }
 
   .banner2 {
@@ -328,6 +329,10 @@ button:hover, button:focus {
     font-size: 50px;
     -webkit-text-stroke: 2px black;
     margin-bottom: 20px;
+}
+
+.quantity__label {
+    grid-column: 1 / 5;
 }
 
   /* FOOTER */
@@ -433,7 +438,7 @@ footer .container__footer--bottom p {
         line-height: 17px;   
     }
 
-    /* PÁG SHOP*/
+    /* RESPONSIVE DESIGN: PÁG SHOP*/
     .banner2 {
         flex-wrap: wrap;
         width: 100%;
@@ -449,10 +454,23 @@ footer .container__footer--bottom p {
         padding-bottom: 10px;
     }
 
-    .double-width, .double-width2, .area1, .area2, .area3 {
+    .double-width, .double-width2 {
         grid-column: 1 / 5;
     }
    
+    .area1 {
+        grid-column: 1 / 3;
+    }
+    .area2 {
+        grid-column: 3 / 5;
+    }
+    .area3 {
+        grid-column: 1 / 3;
+    }
+    .area4 {
+        grid-column: 3 / 5;
+    }
+
     .print__element {
         flex-wrap: wrap;
 }
