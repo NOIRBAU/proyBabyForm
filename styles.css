@@ -614,7 +614,18 @@ button:hover, button:focus {
     .texto__instrucciones p {
     padding: 0;
     }
-}    
+}  
+
+#page__send {
+    margin: 10px;
+}
+
+.page__send__container--center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 980px;
+    margin: 0 auto;
+}
 
 @media (max-width: 576px) {
     .menu__lateral {
