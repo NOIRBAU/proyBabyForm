@@ -55,7 +55,7 @@
                 </label>
                 <label for="Zip" class="double-width2">
                     <span>ZIP or postal code</span>
-                    <input id="ZIP" type="number" name="ZIP" min="10000" max="9999999999">
+                    <input id="ZIP" type="text" name="ZIP" pattern="[A-Za-z0-9]+{5,9}" minlength="5" maxlength="9">
                 </label>
                 <label for="city" class="double-width">
                     <span>*City</span>
@@ -110,7 +110,19 @@
                         <input type=radio name="print" id="print4">
                         <img src="assets/body4.jpg" class="body__image" alt="body">
                     </div>
-                </label>    
+                </label>
+                <label for="payment" class="double-width">
+                    <span>Payment method</span>
+                    <select name='payment' class="select__payment" name="payment" id="payment">
+                        <option value='1' id="visa">VISA</option>
+                        <option value='2' id="master">Master Card</option>
+                        <option value='3' id="american">American Express</option>
+                    </select>
+                </label>
+                <label for="card" class="double-width2">
+                    <span>Card number</span>
+                    <input id="card" type="text" inputmode="numeric" name="card" id="card" pattern="[0-9]{13,19}" minlength="13" maxlength="19" placeholder="13 to 19 digits">
+                </label>   
                 <div class="full-width">
                     <p><button type="submit">Submit</button></p>
                 </div> 
