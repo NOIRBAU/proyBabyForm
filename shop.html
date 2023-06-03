@@ -55,14 +55,14 @@
                 </label>
                 <label for="Zip" class="double-width2">
                     <span>ZIP or postal code</span>
-                    <input id="ZIP" type="text" name="ZIP" pattern="[A-Za-z0-9]+{5,9}" minlength="5" maxlength="9">
+                    <input id="ZIP" type="number" name="ZIP" min="10000" max="9999999999">
                 </label>
                 <label for="city" class="double-width">
                     <span>*City</span>
                     <input id="city" type="text" name="city" required>
                 </label>
                 <label for="country" class="double-width2">
-                    <span>Country or region</span>
+                    <span>*Country or region</span>
                     <select id="country" name="country" class="form-select" required>
                         <option value="CA">Canada</option>
                         <option value="MX">Mexico</option>
@@ -70,7 +70,7 @@
                     </select>
                 </label>
                 <label for="size" class="area1" required>
-                    <span>Select size</span>
+                    <span>*Select size</span>
                     <select id="size" name="size" class="form-select" required>
                         <option value="NB">0-2 months</option>
                         <option value="B1">2-6 months</option>
@@ -79,8 +79,8 @@
                     </select>
                 </label>
                 <label for="color" class="area2">
-                    <span>Select color</span>
-                    <select name='color' class="select__color" required>
+                    <span>*Select color</span>
+                    <select name='color' id="color" class="select__color" required>
                         <option value='1' style='background-color:#ffb6c1' id="color1">Pink</option>
                         <option value='2' style='background-color:#fffacd' id="color2">Yellow</option>
                         <option value='3' style='background-color:#e6e6fa' id="color3">Purple</option>
@@ -89,11 +89,11 @@
                     </select>
                 </label>
                 <label for="qty" class="double-width2" required>
-                    <span>Quantity</span>
+                    <span>*Quantity</span>
                     <input id="qty" type="number" name="qty" min="1" max="10">
                 </label>
                 <label for="print" class="print__element full-width" required>
-                    <span class="full-width">Please choose your favorite design:</span>
+                    <span class="full-width">*Please choose your favorite design:</span>
                     <div class="area1 center">
                         <input type=radio name="print" id="print1">
                         <img src="assets/body1.jpg" class="body__image" alt="body">
@@ -110,21 +110,9 @@
                         <input type=radio name="print" id="print4">
                         <img src="assets/body4.jpg" class="body__image" alt="body">
                     </div>
-                </label>
-                <label for="payment" class="double-width">
-                    <span>Payment method</span>
-                    <select name='payment' class="select__payment" name="payment" id="payment">
-                        <option value='1' id="visa">VISA</option>
-                        <option value='2' id="master">Master Card</option>
-                        <option value='3' id="american">American Express</option>
-                    </select>
-                </label>
-                <label for="card" class="double-width2">
-                    <span>Card number</span>
-                    <input id="card" type="text" inputmode="numeric" name="card" id="card" pattern="[0-9]{13,19}" minlength="13" maxlength="19" placeholder="13 to 19 digits">
-                </label>   
+                </label>    
                 <div class="full-width">
-                    <p><button type="submit">Submit</button></p>
+                    <p><button type="submit" id="button-send">Submit</button></p>
                 </div> 
             </form>
         </section>  
@@ -151,15 +139,57 @@
             <p>Coded by <a href="#">Nelly Bautista </a>& <a href="#">Jorge Prado</a></p>
         </div>
     </footer>
-    <script>
-        const iconoMenu = document.querySelector('.icono__menu')
-        const iconoMenuB = document.querySelector('.icono__menu i')
-        const menuLateral = document.querySelector('.menu__lateral')
-        
-        iconoMenu.onclick = function () {
-            menuLateral.classList.toggle('abierto')
-            const isOpen = menuLateral.classList.contains('abierto')
-        }
-    </script>
+
+    <div id="page__send">
+        <h2>THANK YOU FOR YOUR ORDER</h2>
+        <div class="page__send__container--center">
+            <div class="container__page__send__column-left">
+                <div class="container__page__send__first-name">
+                    <h6>First Name:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__street-address">
+                    <h6>Street address:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__city">
+                    <h6>City:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__size">
+                    <h6>Size:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__color">
+                    <h6>Color:</h6>
+                    <p></p>
+                </div>
+            </div>
+            <div class="container__page__send__column-center">
+                <div class="container__page__send__last-name">
+                    <h6>Last Name:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__zip-code">
+                    <h6>ZIP code:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__country">
+                    <h6>Country or region:</h6>
+                    <p></p>
+                </div>
+                <div class="container__page__send__quantity">
+                    <h6>Quantity:</h6>
+                    <p></p>
+                </div>
+            </div>
+            <div class="container__page__send__column-right">
+                <img src="" alt="" id="img-design">
+                <button id="button--back-order-form">Click to back to order form again</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js" ></script>
 </body>
 </html>
