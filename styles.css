@@ -501,6 +501,7 @@ button:hover, button:focus {
     .section__container-products {
         display: flex;
         flex-wrap: wrap;
+        width: 100vw;
     }
 
     .container__products {
