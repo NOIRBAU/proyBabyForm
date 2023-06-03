@@ -208,12 +208,6 @@ header {
     max-width: 1100px;
     align-items: center;
     margin: 40px auto;
-    flex-wrap: wrap;
-}
-
-.container__products img {
-    width: 300px;
-    height: 300px;
 }
 
 .products--font {
@@ -504,9 +498,34 @@ button:hover, button:focus {
         font-size: medium;
     }
 
+    .section__container-products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .container__products {
-        display: grid;
-        grid-template-columns: .1fr;
+        grid-template-columns: 6fr .2fr 3fr 3fr;
+        grid-gap: 0;
+        max-width: 980px;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .babyBody {
+        width: 100%;
+    }
+
+    .area1 {
+        grid-column: 1 / 2;
+    }
+    .area2 {
+        grid-column: 2 / 3;
+    }
+    .area3 {
+        grid-column: 1 / 2;
+    }
+    .area4 {
+        grid-column: 2 / 3;
     }
 
     /* RESPONSIVE DESIGN: PÁG SHOP*/
