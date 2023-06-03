@@ -618,13 +618,7 @@ button:hover, button:focus {
 
 #page__send {
     margin: 10px;
-}
-
-.page__send__container--center{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 980px;
-    margin: 0 auto;
+    font-size: small;
 }
 
 @media (max-width: 576px) {
