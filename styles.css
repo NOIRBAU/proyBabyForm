@@ -465,7 +465,7 @@ button:hover, button:focus {
     left: 0;
     top: 0;
     z-index: 10;
-    visibility: ;
+    visibility: hidden;
 }
 
 .page__send__container--center{
